@@ -1,0 +1,265 @@
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
+
+        <style type="text/css">
+            .container {
+                width: 100%;
+                height: auto;
+                overflow-y: auto;
+                position: relative;
+                float: left;
+            }
+
+            .card {
+                width: 800px;
+                position: relative;
+                height: auto;
+                overflow-y: auto;
+                margin: 0 auto;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                                "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+                -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+                box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+            }
+
+            .main-img {
+                width: 800px;
+                height: 400px;
+                position: relative;
+                float: left;
+            }
+
+            .card-bottom {
+                width: 760px;
+                padding: 20px;
+                position: relative;
+                float: left;
+                height: auto;
+                overflow-y: auto;
+            }
+
+            .time-duration {
+                width: 100%;
+                position: relative;
+                float: left;
+                height: auto;
+                overflow: auto;
+                margin-bottom: 5px;
+            }
+
+            .days-left {
+                font-weight: 700;
+                color: rgb(92, 124, 250);
+                text-decoration: underline;
+                position: relative;
+            }
+
+            .title {
+                width: 100%;
+                font-size: 24px;
+                color: rgb(60, 60, 60);
+                line-height: 1.5;
+                font-weight: 600;
+                position: relative;
+                float: left;
+                margin-bottom: 10px;
+            }
+
+            .content {
+                width: 100%;
+                font-size: 14px;
+                color: rgb(51, 51, 51); /*very important for eyes*/
+                line-height: 1.5;
+                position: relative;
+                height: 63px; /*lineHeight * #ofLines*/
+                overflow-y: hidden;
+            }
+
+            .read-full-story {
+                width: 100%;
+                position: relative;
+                float: left;
+                font-size: 14px;
+                line-height: 1.5;
+                height: 31px;
+                margin-top: 5px;
+            }
+
+            .share-bar {
+                width: 100%;
+                height: 40px;
+                font-size: 14px;
+                line-height: 1.5;
+                background-color: #eeeeee;
+                position: relative;
+                float: left;
+            }
+
+            .social-block {
+                width: 50%;
+                height: 30px;
+                position: relative;
+                float: left;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 2.143;
+                background-color: #00d1b2;
+                transition : background-color 0.25s ease;
+                -webkit-transition : background-color 0.25s ease;
+                -moz-transition : background-color 0.25s ease;
+                -o-transition : background-color 0.25s ease;
+            }
+
+            .social-block:hover {
+                background-color: #00c4a7;
+                cursor: pointer;
+            }
+
+            .social-cursive-title {
+                font-family: cursive;
+                font-style: italic;
+                font-weight: 600;
+            }
+
+            .white {
+                color: #ffffff;
+            }
+
+            @media (min-width: 610px) and (max-width: 809px){
+                .card {
+                    width: 600px;
+                }
+
+                .main-img {
+                    width: 600px;
+                    height: 300px;
+                }
+
+                .card-bottom {
+                    width: 560px;
+                    padding: 20px;
+                }
+            }
+
+            @media (min-width: 510px) and (max-width: 609px){
+                .card {
+                    width: 500px;
+                }
+
+                .main-img {
+                    width: 500px;
+                    height: 250px;
+                }
+
+                .card-bottom {
+                    width: 460px;
+                    padding: 20px;
+                }
+            }
+
+            @media (min-width: 410px) and (max-width: 509px){
+                .card {
+                    width: 400px;
+                }
+
+                .main-img {
+                    width: 400px;
+                    height: 200px;
+                }
+
+                .card-bottom {
+                    width: 360px;
+                    padding: 20px;
+                }
+
+                .on-big-screen {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 310px) and (max-width: 409px){
+                .card {
+                    width: 300px;
+                }
+
+                .main-img {
+                    width: 300px;
+                    height: 150px;
+                }
+
+                .card-bottom {
+                    width: 280px;
+                    padding: 10px;
+                }
+
+                .on-big-screen {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="card">
+                <div class="main-img">
+                    <img src="images/Malaysia.jpg" height="100%" width="100%">
+                </div>
+
+                <div class="card-bottom">
+                    <div class="time-duration">
+                        12/12/2018 - 15/12/2018, <span class="days-left">3</span> days left
+                    </div>
+
+                    <div class="title">
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                    </div>
+
+                    <div class="content">
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                        Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+
+                    </div>
+
+                    <div class="read-full-story">
+                        <a href="#"> Read Full Story >> </a>
+                    </div>
+
+                    <div class="share-bar">
+                        <div class="social-block">
+                            <span class="on-big-screen">Share on </span>
+                            <a href="#" class="social-cursive-title">Twitter</a>&nbsp;
+                            <i class="fab fa-twitter white"></i>
+                        </div>
+
+                        <div class="social-block">
+                            <span class="on-big-screen">Share on </span>
+                            <a href="#" class="social-cursive-title">Facebook</a>&nbsp;
+                            <i class="fab fa-facebook white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
