@@ -12,24 +12,31 @@
     height: auto;
     overflow-y: auto;
     margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 30px;
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .main-img {
-    width: 800px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     position: relative;
     float: left;
 }
 
+.main-img img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
 .card-bottom {
-    width: 760px;
-    padding: 20px;
+    width: 560px;
+    padding-left: 20px;
     position: relative;
     float: left;
     height: auto;
@@ -43,9 +50,12 @@
     height: auto;
     overflow: auto;
     margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
 .days-left {
+    width: 100%;
     font-weight: 700;
     color: rgb(92, 124, 250);
     text-decoration: underline;
@@ -131,13 +141,13 @@
     }
 
     .main-img {
-        width: 600px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     .card-bottom {
-        width: 560px;
-        padding: 20px;
+        width: 380px;
+        
     }
 }
 
@@ -153,7 +163,7 @@
 
     .card-bottom {
         width: 460px;
-        padding: 20px;
+        padding: 0px;
     }
 }
 
@@ -169,7 +179,7 @@
 
     .card-bottom {
         width: 360px;
-        padding: 20px;
+        padding: 0px;
     }
 
     .on-big-screen {
@@ -189,7 +199,7 @@
 
     .card-bottom {
         width: 280px;
-        padding: 10px;
+        padding: 0px;
     }
 
     .on-big-screen {
