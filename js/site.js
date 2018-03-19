@@ -1,12 +1,55 @@
 var dataUrl = 'https://my-json-server.typicode.com/khalid1990/ofrs/offers';
 
-fetch(dataUrl).then(function(response){
-    response.json().then(function(jsonData){
-        for (var i=0; i< jsonData.length; i++) {
-            renderOfferCard(jsonData[i]);
-        }
+loadData(dataUrl);
+
+function debounce(func, wait, immediate) {
+    /* David Walsh*/
+
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+var handlerForPageBottomReached = debounce(function(){
+    var container = document.getElementById("container");
+    if (window.scrollY + window.innerHeight > container.offsetHeight - 20) {
+        loadData(dataUrl);
+    }
+}, 250);
+
+window.addEventListener("scroll", handlerForPageBottomReached);
+
+function loadData(dataUrl) {
+    console.log("Loading data");
+
+    fetch(dataUrl).then(function(response){
+        response.json().then(function(jsonData){
+            var lastId = 0;
+
+            for (var i=jsonData.length - 1; i >= 0; i--) {
+                lastId = jsonData[i].id;
+                renderOfferCard(jsonData[i]);
+            }
+
+            var container = document.getElementById("container");
+
+            var lastIdHolder = document.createElement("div");
+            lastIdHolder.id = "lastIdHolder";
+            lastIdHolder.className = "hidden";
+            lastIdHolder.appendChild(document.createTextNode(lastId));
+            container.appendChild(lastIdHolder);
+        });
     });
-});
+}
 
 function renderOfferCard(offer) {
     var container = document.getElementById("container");
