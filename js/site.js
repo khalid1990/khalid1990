@@ -20,7 +20,7 @@ function debounce(func, wait, immediate) {
 }
 
 var handlerForPageBottomReached = debounce(function(){
-    var container = document.getElementById("container");
+    var container = document.getElementById("site-container");
     if (window.scrollY + window.innerHeight > container.offsetHeight - 20) {
         loadData(dataUrl);
     }
@@ -40,7 +40,7 @@ function loadData(dataUrl) {
                 renderOfferCard(jsonData[i]);
             }
 
-            var container = document.getElementById("container");
+            var container = document.getElementById("site-container");
 
             var lastIdHolder = document.createElement("div");
             lastIdHolder.id = "lastIdHolder";
@@ -52,7 +52,7 @@ function loadData(dataUrl) {
 }
 
 function renderOfferCard(offer) {
-    var container = document.getElementById("container");
+    var container = document.getElementById("site-container");
 
     var card = createElementWithClassName("div", "card");
     card.appendChild(mainImageSection(offer.imageUrl));
