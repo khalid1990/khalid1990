@@ -62,7 +62,7 @@ function renderOfferCard(offer) {
 }
 
 function cardBottomSection(offer) {
-    var card_bottom = createElementWithClassName("div", "card-bottom");
+    var card_bottom = createElementWithClassName("div", "card-right");
 
     card_bottom.appendChild(titleSection(offer.title));
     card_bottom.appendChild(timeDurationSection(offer.fromDate, offer.toDate));
@@ -107,7 +107,8 @@ function readFullStorySection() {
     var read_full_story = createElementWithClassName("div", "read-full-story");
     var link = document.createElement("a");
     link.href="#";
-    var text = document.createTextNode("Read Full Story >>");
+    link.className += "btn btn-primary get-now";
+    var text = document.createTextNode("Get Now!!!");
     link.appendChild(text);
     read_full_story.appendChild(link);
 
@@ -124,15 +125,20 @@ function contentSection(contentText) {
 
 function titleSection(titleText) {
     var title = createElementWithClassName("div", "title");
+    var titleLink = createElementWithClassName("a", "title-link");
+    titleLink.href="#";
     var text = document.createTextNode(titleText);
-    title.appendChild(text);
+    titleLink.appendChild(text);
+    title.appendChild(titleLink);
 
     return title;
 }
 
 function timeDurationSection(fromDate, toDate) {
     var time_duration = createElementWithClassName("div", "time-duration");
-    var text = document.createTextNode(fromDate + " - " + toDate);
+    var icon_calendar = createElementWithClassName("i", "fas fa-calendar-alt crimson");
+    time_duration.appendChild(icon_calendar);
+    var text = document.createTextNode(" " + fromDate + " - " + toDate);
     time_duration.appendChild(text);
 
     return time_duration;
@@ -145,8 +151,20 @@ function mainImageSection(imageUrl) {
     img.height="100%";
     img.width="100%";
     img.src=imageUrl;
-
     main_img.appendChild(img);
+
+    var saveOffer = createElementWithClassName("div", "save-offer");
+    var saveIcon = createElementWithClassName("i", "fas fa-bookmark");
+    saveOffer.appendChild(saveIcon);
+    main_img.appendChild(saveOffer);
+
+    var addedBy = createElementWithClassName("div", "left-bottom");
+    var addedByName = createElementWithClassName("span", "added-by");
+    addedByName.appendChild(document.createTextNode("John Doe"));
+    addedBy.appendChild(addedByName);
+
+    addedBy.appendChild(document.createTextNode(", Editor"));
+    main_img.appendChild(addedBy);
 
     return main_img;
 }

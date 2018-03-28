@@ -1,9 +1,14 @@
+body {
+    margin: 0;
+}
+
 .container {
     width: 100%;
     height: auto;
     overflow-y: auto;
     position: relative;
     float: left;
+    background-color: rgb(235, 235, 230);
 }
 
 .card {
@@ -12,31 +17,69 @@
     height: auto;
     overflow-y: auto;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    /*-webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);*/
     padding: 15px;
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .main-img {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     position: relative;
     float: left;
 }
 
 .main-img img {
-    height: 100%;
-    width: 100%;
     position: relative;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
-.card-bottom {
-    width: 560px;
-    padding-left: 20px;
+.save-offer {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 5px;
+    color: #aeaeae;
+}
+
+.save-offer .saved {
+    color: springgreen;
+}
+
+.save-offer i {
+    position: relative;
+    margin: 0 auto;
+}
+
+.left-bottom {
+    width: 100%;
+    height: 21px;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.added-by {
+    font-weight: bold;
+    color: darkred;
+}
+
+.card-right {
+    width: 595px;
+    padding-left: 15px;
     position: relative;
     float: left;
     height: auto;
@@ -47,11 +90,12 @@
     width: 100%;
     position: relative;
     float: left;
-    height: auto;
     overflow: auto;
-    margin-bottom: 5px;
     font-size: 11px;
+    line-height: 14px;
+    height: 15px;
     font-weight: bold;
+    color: rgb(74, 74, 74);
 }
 
 .days-left {
@@ -64,9 +108,11 @@
 
 .title {
     width: 100%;
-    font-size: 24px;
+    height: 48px;
+    font-size: 16px;
     color: rgb(60, 60, 60);
-    line-height: 1.5;
+    line-height: 24px;
+    overflow-y: hidden;
     font-weight: 600;
     position: relative;
     float: left;
@@ -77,9 +123,9 @@
     width: 100%;
     font-size: 14px;
     color: rgb(51, 51, 51); /*very important for eyes*/
-    line-height: 1.5;
-    position: relative;
+    line-height: 21px;
     height: 63px; /*lineHeight * #ofLines*/
+    position: relative;
     overflow-y: hidden;
 }
 
@@ -89,11 +135,88 @@
     float: left;
     font-size: 14px;
     line-height: 1.5;
-    height: 31px;
     margin-top: 5px;
+    height: 34px;
 }
 
-.share-bar {
+.get-now {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.crimson {
+    color: crimson;
+}
+
+
+@media (min-width: 610px) and (max-width: 809px){
+    .card {
+        width: 600px;
+    }
+
+    .main-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-right {
+        width: 455px;
+    }
+}
+
+@media (min-width: 510px) and (max-width: 609px){
+    .card {
+        width: 500px;
+        padding: 10px;
+    }
+
+    .main-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-right {
+        width: 370px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 509px){
+    .card {
+        width: 400px;
+        padding: 10px;
+    }
+
+    .main-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-right {
+        width: 300px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 310px) and (max-width: 409px){
+    .card {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .main-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-right {
+        width: 205px;
+        padding-left: 5px;
+    }
+}
+
+/*.share-bar {
     width: 100%;
     height: 40px;
     font-size: 14px;
@@ -137,76 +260,4 @@
 
 .hidden {
     display: none;
-}
-
-@media (min-width: 610px) and (max-width: 809px){
-    .card {
-        width: 600px;
-    }
-
-    .main-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .card-bottom {
-        width: 380px;
-        
-    }
-}
-
-@media (min-width: 510px) and (max-width: 609px){
-    .card {
-        width: 500px;
-    }
-
-    .main-img {
-        width: 500px;
-        height: 250px;
-    }
-
-    .card-bottom {
-        width: 460px;
-        padding: 0px;
-    }
-}
-
-@media (min-width: 410px) and (max-width: 509px){
-    .card {
-        width: 400px;
-    }
-
-    .main-img {
-        width: 400px;
-        height: 200px;
-    }
-
-    .card-bottom {
-        width: 360px;
-        padding: 0px;
-    }
-
-    .on-big-screen {
-        display: none;
-    }
-}
-
-@media (min-width: 310px) and (max-width: 409px){
-    .card {
-        width: 300px;
-    }
-
-    .main-img {
-        width: 300px;
-        height: 150px;
-    }
-
-    .card-bottom {
-        width: 280px;
-        padding: 0px;
-    }
-
-    .on-big-screen {
-        display: none;
-    }
-}
+}*/
