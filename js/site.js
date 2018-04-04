@@ -175,3 +175,21 @@ function createElementWithClassName(tag, className) {
 
     return element;
 }
+
+/*Header part*/
+
+var searchBtn = document.getElementById("search-btn");
+
+searchBtn.addEventListener("click", function(e) {
+    var searchBox = document.getElementById("search-box");
+    console.log(searchBox.style.display);
+    if (isVisible(searchBox)) {
+        searchBox.style.display = 'none'
+    } else {
+        searchBox.style.display = 'block'
+    }
+});
+
+function isVisible(object) {
+    return object.offsetWidth > 0 && object.offsetHeight > 0;
+}

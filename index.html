@@ -5,15 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
-        <link rel="stylesheet" href="css/site.css">
-        <script type="text/javascript" src="js/site.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--site specific css and js files should be placed after library files declarations so that they don't get overriden-->
+        <link rel="stylesheet" href="css/site.css">
     </head>
 
     <body>
+        <div class="header">
+            <div class="header-container">
+                <div class="header-title">
+                    <span class="yellow">b</span>oom
+                </div>
+
+                <div class="search-icon">
+                    <i class="fas fa-search" id="search-btn"></i>
+                </div>
+
+                <div class="profile-photo">
+
+                </div>
+
+                <div class="search-box" id="search-box">
+                    <div class="search-field-box">
+                        <input class="form-control search-field" id="search-field" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="site-container" id="site-container">
 
         </div>
+
+        <script type="text/javascript" src="js/site.js"></script>
     </body>
 </html>
-
