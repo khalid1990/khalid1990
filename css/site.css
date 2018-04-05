@@ -235,6 +235,10 @@ body {
 }
 
 @media (min-width: 610px) and (max-width: 809px){
+    .header-container {
+        width: 590px;
+    }
+
     .card {
         width: 600px;
     }
@@ -250,6 +254,10 @@ body {
 }
 
 @media (min-width: 510px) and (max-width: 609px){
+    .header-container {
+        width: 490px;
+    }
+
     .card {
         width: 500px;
         padding: 10px;
@@ -267,6 +275,10 @@ body {
 }
 
 @media (min-width: 410px) and (max-width: 509px){
+    .header-container {
+        width: 390px;
+    }
+
     .card {
         width: 400px;
         padding: 10px;
@@ -284,6 +296,10 @@ body {
 }
 
 @media (min-width: 310px) and (max-width: 409px){
+    .header-container {
+        width: 290px;
+    }
+
     .card {
         width: 300px;
         padding: 10px;
