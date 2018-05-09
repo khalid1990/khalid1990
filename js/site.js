@@ -1,3 +1,15 @@
+(function() {
+    window.addEventListener("load", function(loadEvent) {
+        console.log("loaded window...")
+
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register('./dhmk-sw.js').then(function() {
+                console.log("service worker registered...");
+            })
+        }
+    });
+})();
+
 var dataUrl = 'https://my-json-server.typicode.com/khalid1990/ofrs/offers';
 
 loadData(dataUrl);
