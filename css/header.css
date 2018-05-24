@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+}
+
+.header-container {
+    width: 100%;
+    min-width: 250px;
+    height: 60px;
+    padding: 5px;
+    position: relative;
+    background-color: #dd552d;
+    margin: 0 auto;
+    float: left;
+}
+
+.logo {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 50px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    position: relative;
+    float: left;
+    color: yellow;
+}
+
+.iconic-nav-link {
+    position: relative;
+    float: right;
+    height: 42px;
+    margin-top: 4px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    padding: 4px 10px 4px 10px;
+    background-color: #cc441c;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.iconic-nav-link a {
+    color: #ffffff;
+}
+
+.iconic-nav-link a:hover {
+    color: #aeaeae;
+    text-decoration: none;
+}
+
+@media (max-width: 387px){
+    .logo {
+        font-size: 18px;
+    }
+
+    .iconic-nav-link span.text {
+        display: none;
+    }
+
+    .iconic-nav-link span.icon {
+        font-size: 14px;
+        line-height: 32px;
+        border: none;
+    }
+
+    .iconic-nav-link {
+        border: none;
+        height: 40px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 388px) and (max-width: 577px){
+    .iconic-nav-link span.text {
+        display: none;
+    }
+
+    .iconic-nav-link span.icon {
+        font-size: 24px;
+        line-height: 32px;
+        border: none;
+    }
+
+    .iconic-nav-link {
+        border: none;
+        height: 40px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 578px) and (max-width: 767px){
+    .iconic-nav-link span.text {
+        display: none;
+    }
+
+    .iconic-nav-link span.icon {
+        font-size: 24px;
+        line-height: 32px;
+        border: none;
+    }
+
+    .iconic-nav-link {
+        border: none;
+        height: 40px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 957px){
+
+}
+
+@media (min-width: 958px) and (max-width: 1147px){
+
+}

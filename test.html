@@ -2,178 +2,13 @@
 
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript">
 
         </script>
         <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <style type="text/css">
-
-            body {
-                margin: 0;
-            }
-
-            .container {
-                /*background-image: url("images/app-shell/yellow-back.jpg");*/
-                width: 100%;
-                height: 100%;
-                min-height: 1000px;
-                overflow-y: auto;
-                position: relative;
-                padding: 100px;
-            }
-
-            .tile {
-                position: relative;
-                float: left;
-                width: 182px;
-                padding: 5px;
-                min-height: 150px;
-                height: auto;
-                overflow-y: auto;
-                background-color: #ffffff;
-                border: 1px solid #eeeeee;
-            }
-
-            .tile-title {
-                position: relative;
-                float: left;
-                width: 170px;
-                height: 32px;
-                font-size: 14px;
-                line-height: 16px;
-                font-weight: 600;
-                overflow-y: hidden;
-                text-transform: capitalize;
-                letter-spacing: 0.7px;
-                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-                color: rgb(51, 51, 51);
-                word-wrap: break-word;
-                margin-bottom: 5px;
-            }
-
-            .tile-img {
-                width: 170px;
-                position: relative;
-                float: left;
-            }
-
-            .tile-img img {
-                position: relative;
-                height: auto;
-                width: auto;
-                max-height: 100%;
-                max-width: 100%;
-            }
-
-            .tile-action-layer {
-                position: relative;
-                float: left;
-                height: 20px;
-                font-size: 18px;
-                line-height: 20px;
-                width: 170px;
-                text-align: center;
-            }
-
-            .action-btn {
-                position: relative;
-                float: left;
-                height: 100%;
-                width: 25%;
-            }
-
-            .action-btn {
-                font-size: 16px;
-                cursor: pointer;
-                color: #aeaeae;
-            }
-
-            .share {
-
-            }
-
-            .info {
-                color : #3b5998;
-            }
-
-            .watch {
-
-            }
-
-            .like {
-                color: #aeaeae;
-            }
-
-            .basic-info-layer {
-                position: relative;
-                float: left;
-                width: 170px;
-                height: 20px;
-            }
-
-            .offer-type-box {
-                position: relative;
-                float: left;
-                height: 100%;
-                width: 50%;
-                background-color: #dd552d;
-                color: #ffffff;
-                text-transform: uppercase;
-                font-size: 12px;
-                line-height: 20px;
-                font-weight: 600;
-                text-align: center;
-            }
-
-            .amount-box {
-                position: relative;
-                float: left;
-                height: 100%;
-                width: 50%;
-                font-size: 14px;
-                line-height: 20px;
-                font-weight: 700;
-                text-align: center;
-                /*background-color: lemonchiffon;*/
-                color: #ea3c53;
-            }
-
-            .user-info-layer {
-                position: relative;
-                float: left;
-                height: 12px;
-                width: 170px;
-                line-height: 12px;
-                font-size: 11px;
-                color : rgb(151, 151, 151);
-                margin-top: 3px;
-            }
-
-            .user-info-layer a {
-                font-weight: bold;
-                font-style: italic;
-                color : rgb(151, 151, 151);
-            }
-
-            .user {
-
-            }
-
-            .info-popup {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 95%;
-                width: 100%;
-                background-color: black;
-                opacity: .7;
-                padding: 10px;
-                color: #ffffff;
-                font-weight: bold;
-                display: none;
-            }
-        </style>
+        <link rel="stylesheet" href="css/theme-tile-site.css">
 
         <script type="text/javascript">
             function showInfo(element) {
@@ -208,11 +43,23 @@
 
                 return null;
             }
+
+            function culture(noOfTiles) {
+                console.log('called');
+                for (var i = 0; i < noOfTiles; i++) {
+                    var tile = document.getElementsByClassName('tile')[0];
+                    console.log(tile);
+                    var clonedTile = tile.cloneNode(true);
+                    console.log(clonedTile);
+                    var site_container = document.getElementsByClassName('site-container')[0];
+                    site_container.appendChild(clonedTile);
+                }
+            }
         </script>
     </head>
 
-    <body>
-        <div class="container">
+    <body onload="culture(100)">
+        <div class="site-container">
             <div class="tile">
                 <div class="tile-title">
                     Lorem ipsum dolor sit amet conjecture dela ato morte solor de no

@@ -5,7 +5,7 @@ var dataCache = "dhmk-data-cache";
 var filesToCache = [
     "/khalid1990",
     "/khalid1990/index.html",
-    "/khalid1990/css/site.css",
+    "/khalid1990/css/theme1-site.css",
     "/khalid1990/fontawesome-free-5.0.8/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,ico}",
     "/khalid1990/js/app.js"
 ];
